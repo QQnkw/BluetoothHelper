@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/scanDeviceFragment">
+
+    <fragment
+        android:id="@+id/scanDeviceFragment"
+        android:name="com.bluetooth.bluetoothhelper.ui.scan.ScanDeviceFragment"
+        android:label="scan_device_fragment"
+        tools:layout="@layout/scan_device_fragment" >
+        <action
+            android:id="@+id/action_scanDeviceFragment_to_connectDeviceFragment"
+            app:destination="@id/connectDeviceFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            app:popUpTo="@id/scanDeviceFragment"/>
+    </fragment>
+    <fragment
+        android:id="@+id/connectDeviceFragment"
+        android:name="com.bluetooth.bluetoothhelper.ui.connect.ConnectDeviceFragment"
+        android:label="connect_device_fragment"
+        tools:layout="@layout/connect_device_fragment" >
+    </fragment>
+</navigation>
